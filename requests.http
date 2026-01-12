@@ -1,0 +1,25 @@
+### Index document
+POST http://localhost:8080/documents
+Content-Type: application/json
+X-Tenant-Id: tenant-a
+
+{
+  "id": "doc1",
+  "title": "Hello world",
+  "content": "This is a test document."
+}
+
+### Search
+GET http://localhost:8080/search?q=test
+X-Tenant-Id: tenant-a
+
+### Get document
+GET http://localhost:8080/documents/doc1
+X-Tenant-Id: tenant-a
+
+### Delete
+DELETE http://localhost:8080/documents/doc1
+X-Tenant-Id: tenant-a
+
+### Health
+GET http://localhost:8080/health
